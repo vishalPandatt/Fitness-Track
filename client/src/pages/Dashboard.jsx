@@ -111,6 +111,17 @@ const Dashboard = () => {
     dashboardData();
     getTodaysWorkout();
   }, []);
+
+  if (loading) {
+    return (
+      <Container>
+        <Wrapper>
+          <Title>Loading...</Title>
+        </Wrapper>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       <Wrapper>
